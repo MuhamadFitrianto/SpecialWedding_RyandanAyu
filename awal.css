@@ -1,0 +1,31 @@
+/* ====== Tombol di tengah gambar ====== */ 
+.buka-btn { position: absolute; /* tombol bebas diatur di dalam .pertama */ 
+    top: 470px; /* posisikan 50% dari atas container */ 
+    left: 50%; /* posisikan 50% dari kiri container */ 
+    transform: translate(-50%, -50%); /* geser balik supaya benar-benar di tengah */ 
+    background: #ffffff; 
+    color: #00695c; 
+    border: none; 
+    padding: 8px 10px; 
+    border-radius: 50px; 
+    font-size: 0.75rem; 
+    font-weight: 600; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+    z-index: 10; /* pastikan tombol di atas semua elemen */ 
+} /* Efek hover */ 
+
+.buka-btn:hover { 
+    background: #00695c; 
+    color: #fff; 
+    transform: translate(-50%, -50%) scale(1.05); 
+}
+
+    @media (max-width: 480px){
+        .buka-btn{
+        font-size: 0.9rem;
+    padding: 9px 16px;
+    margin-top: 30%;
+        }
+    }

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan Pernikahan</title>
+  <link rel="stylesheet" href="awal.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+/* Bagian cover hilang setelah klik */
+  .section-cover {
+    transition: all .8s ease-in-out;
+  }
+
+/* Posisi tombol musik */
+
+</style>
+</head>
+<body>
+  <!-- ✅ COVER SECTION -->
+<div class="section-cover">
+  <img src="img/pertama.jpg" alt="">
+  <div class="overlay">
+    <button class="buka-btn" onclick="openInvitation()">Buka Undangan</button>
+  </div>
+</div>
+
+   <!-- Background Layer -->
+<div class="section-content">
+  <img src="img/Kedua.jpg" alt="Desain undangan bagian atas">
+  <img src="img/ketiga.jpg" alt="Desain undangan bagian tengah">
+  
+  <!-- Gambar keempat + teks di dalamnya -->
+  <div class="keempat-wrapper">
+    <img src="img/keempat.jpg" alt="Latar belakang nama mempelai">
+    
+    
+   <!-- Di dalam .teks-overlay (gambar keempat) -->
+<div class="teks-overlay">
+  <h1 class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h1>
+  <p class="subtitle">
+    Maha Suci Allah SWT yang telah menciptakan Makhluk-Nya Berpasang Pasangan. Tanpa Mengurangi Rasa Hormat, Dengan ini kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami:
+  </p>
+  
+  <!-- Hanya tampilkan Fitrianto di sini -->
+  <div class="person-fitrianto">
+    <h2>Muhamad Fitrianto</h2>
+    <p class="parent">Putra dari </p>
+      </p> Bpk Ichlasul Huda & Ibu Mariam</p>
+      <br>
+      <br>
+      <br>
+      <H1>&</H1>
+  </div>
+</div>
+  </div>
+      <!-- Foto Kelima + Nama Endang Sri Rahayu -->
+<div class="kelima-wrapper">
+  <img src="img/kelima.jpg" alt="Endang Sri Rahayu" >
+  <div class="nama-endang-overlay">
+    <div class="person-endang">
+      <h2>Endang Sri Rahayu</h2>
+      <p class="parent">Putri dari </p>
+      <p>Alm. Bpk Sumarno & Ibu Salamah</p>
+    </div>
+    <!-- Tambahan Save The Date -->
+  <div class="save-date-overlay">
+    <img src="img/angsa.png" alt="Angsa" class="angsa-img">
+    <h2>Save The Date</h2>
+    <p class="event-info">Sabtu, 6 Desember 2025</p>
+    <div id="countdown"></div>
+  </div>
+  </div>
+</div>
+
+    <!-- Event Info -->
+    <section class="event">
+      <h2>Waktu & Tempat</h2>
+      <div class="event-card">
+        <i class="fas fa-mosque"></i>
+        <h3>Akad Nikah</h3>
+        <p><i class="far fa-calendar"></i> Sabtu, 6 Desember 2025</p>
+        <p><i class="far fa-clock"></i> 11.00 – 15.00 WIB</p>
+        <p><i class="fas fa-map-marker-alt"></i> Musholla Daarul Ihsan, Ps. Manggis, Kota Jakarta Selatan</p>
+        <a href="https://maps.app.goo.gl/nejZFZreGu3caxYY9" target="_blank" class="maps-btn">Lihat Maps</a>
+      </div>
+      <div class="event-card">
+        <i class="fas fa-utensils"></i>
+        <h3>Resepsi</h3>
+        <p><i class="far fa-calendar"></i> Sabtu, 6 Desember 2025</p>
+        <p><i class="far fa-clock"></i> 11.00 – 15.00 WIB</p>
+        <p><i class="fas fa-map-marker-alt"></i> Musholla Daarul Ihsan</p>
+      </div>
+    </section>
+    <!-- Wedding Gift Section -->
+<section class="gift">
+  <h1>Wedding Gift</h1>
+  <p>
+    Doa restu Anda merupakan karunia terindah bagi kami.
+    Dan jika memberi adalah ungkapan tanda kasih,
+    dengan senang hati kami menerima kado secara cashless.
+  </p>
+  <img src="img/bca.png" alt="" srcset="">
+  <div class="gift-info">
+    <p class="rekening">No. Rekening <strong id="rekening">5055278234</strong></p>
+    <p class="nama-rek">a.n. Endang Sri Rahayu</p>
+    <button id="copyBtn" onclick="copyRekening()">Salin No. Rekening</button>
+  </div>
+
+  <p id="copyMessage" class="copy-message"></p>
+</section>
+
+    <!-- RSVP -->
+    <section class="rsvp">
+  <h2>Konfirmasi Kehadiran</h2>
+  <form id="rsvpForm">
+    <input type="text" id="name" placeholder="Nama Anda" required />
+    <input type="text" id="pesan" placeholder="Isi Pesan" required />
+    <select id="attendance" required>
+      <option value="">-- Hadir? --</option>
+      <option value="hadir">InsyaAllah Hadir</option>
+      <option value="tidak">Mohon Maaf Tidak Bisa Hadir</option>
+    </select>
+    <button type="submit">Kirim</button>
+  </form>
+
+  <div id="rsvpMessage"></div>
+
+  <!-- Tempat hasil pesan ditampilkan -->
+  <div id="rsvpList"></div>
+</section>
+
+  <!-- Audio Toggle -->
+  <audio id="backgroundMusic" autoplay loop muted>
+    <source src="music/lagu.mp3" type="audio/mpeg">
+  </audio>
+  <!-- <div class="music-toggle" onclick="toggleMusic()">
+    <i class="fas fa-volume-up" id="musicIcon"></i>
+  </div> -->
+
+  <script src="script.js"></script>
+</body>
+</html>

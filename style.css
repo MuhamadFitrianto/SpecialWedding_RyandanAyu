@@ -1,0 +1,728 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #5aabdeff;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden; /* Penting! */
+  width: 100%;
+}
+
+/* === Bagian gambar desain (Kedua, Ketiga, Keempat) === */
+.section-cover {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  overflow: visible;
+}
+
+.section-cover img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0; /* Penting: cegah kompresi di mobile */
+  
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  overflow: visible;
+}
+
+.section-content img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0; /* Penting: cegah kompresi di mobile */
+  
+}
+
+.keempat-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1; /* lapisan bawah */
+}
+
+.keempat-wrapper img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+}
+
+/* === Foto Kelima dengan Nama Endang === */
+
+.kelima-wrapper {
+  position: relative;
+  z-index: 10; /* lebih tinggi dari .keempat-wrapper */
+}
+
+.kelima-wrapper img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0
+}
+
+.nama-endang-overlay {
+  position: absolute;
+  top: 15%; /* 👈 INI JARAK ATAS YANG BISA KAMU SESUAIKAN */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: white;
+  z-index: 20;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.person-endang h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.person-endang .parent p{
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margint-bottom: 40px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+
+/* === Overlay teks di atas gambar keempat === */
+.teks-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  z-index: 10;
+}
+
+.bismillah {
+  font-family: 'Amiri', serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-style: italic;
+  max-width: 700px;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Nama mempelai di tengah bawah */
+.couple-names {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.couple-names .person {
+  max-width: 300px;
+}
+
+.couple-names h2 {
+  font-family: 'Poppins', sans-serif;;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.couple-names .parent {
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* === SAVE THE DATE DI DALAM FOTO === */
+.save-date-overlay {
+  position: absolute;
+  bottom: -330px; /* ⬅️ Geser naik/turun posisi di dalam gambar */
+  left: 50%; /* Tengah secara horizontal */
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+
+  /* 🟩 KAMU BISA UBAH POSISI DI SINI UNTUK GESER MANUAL */
+  /* contoh: bottom: 40px; atau transform: translate(-50%, 20px); */
+}
+
+/* Gambar angsa */
+.save-date-overlay img {
+  width: 100%;
+  height: 100%;
+  position: relative; top: 0px; left: 0px;
+
+  /* 🟦 GESER ANGSA SAJA (opsional) */
+  /* position: relative; top: -5px; left: 10px; */
+}
+
+/* Teks Save The Date */
+.save-date-overlay h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  margin: 0px 0px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Info tanggal */
+.save-date-overlay .event-info {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #f0f0f0;
+}
+
+/* Countdown */
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+#countdown div {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 12px;
+  border-radius: 6px;
+  min-width: 55px;
+}
+
+#countdown span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#countdown small {
+  font-size: 0.7rem;
+}
+
+
+/* === Event, Map, Gallery, RSVP === */ 
+.event {
+  width: 100%;
+  padding: 50px 20px;
+  background: linear-gradient(180deg, #96b2eb, #5caee4ff);
+}
+
+.event h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #ffffffff;
+  font-family: 'Poppins', sans-serif;;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+/* === Tambahkan tanda dekoratif di bawah judul === */
+.event h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #4caf50;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* === Event Cards Container === */
+.event-card {
+  background: #ffffffff;
+  border-radius: 14px;
+  padding: 18px 15px;
+  margin: 15px auto;
+  width: 80%;
+  max-width: 380px; /* kotak lebih kecil */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* === Tambahkan tanda hijau di atas setiap kotak === */
+.event-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #4caf50;
+  border-radius: 0 0 2px 2px;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.event-card i {
+  font-size: 1.8rem;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.event-card h3 {
+  margin: 8px 0;
+  color: #1b5e20;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.event-card p {
+  color: #444;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 4px 0;
+}
+
+.event-card p i {
+  color: #4caf50;
+  margin-right: 6px;
+}
+.gift {
+  width: 100%;
+  padding: 20px 20px;
+  background: linear-gradient(180deg, #ffffffff, #ffffffff);
+  text-align: center;
+  color: #000000ff;
+  font-family: 'Poppins', sans-serif; 
+}
+
+
+.gift h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+/* Garis dekoratif seperti di event */
+.gift h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #4caf50;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+.gift img{
+  width: 50%;
+  height:50%;
+}
+.gift p {
+  font-size: 1rem;
+  color: #000000ff;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+.rekening {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.nama-rek {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+#copyBtn {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#copyBtn:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+}
+
+.copy-message {
+  color: #c8ffd4;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.maps-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.maps-btn:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+}
+/* Music Toggle */ 
+.mmusic-toggle { 
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  background: #2e7d32; 
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: white; 
+  cursor: pointer; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+  z-index: 100;
+}
+
+/* ... (sisa CSS untuk event, map, RSVP, footer, music toggle — sama seperti sebelumnya) ... */
+.rsvp h2{
+   text-align: center;
+  margin-bottom: 5px;
+  color: #ffffffff;
+  font-family: 'Poppins', sans-serif;;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.rsvp form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 12px; 
+  max-width: 400px; 
+  margin: 20px auto; 
+} 
+.rsvp input, .rsvp select, .rsvp button { 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  font-size: 1rem; 
+} 
+  .rsvp button { 
+    background: #2e7d32; 
+    color: white; 
+    cursor: pointer; 
+    font-weight: 600; 
+  } 
+  .rsvp button:hover { 
+    background: #1b5e20; 
+  } 
+  #rsvpMessage { 
+    text-align: center; 
+    margin-top: 15px; 
+    color: #2e7d32; 
+    font-weight: 600; 
+  }
+  .rsvp-item {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.rsvp-item:hover {
+  transform: scale(1.02);
+}
+
+.rsvp-item p {
+  margin: 5px 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.rsvp-item .status {
+  font-size: 0.85rem;
+  color: #ffffffff;
+  font-weight: 600;
+}
+
+
+/* === RESPONSIVE MOBILE === */
+@media (max-width: 768px) {
+  .bismillah {
+    font-size: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 0.8rem;
+    padding: 0 15px;
+  }
+
+  .couple-names {
+    margin-top : 43%;
+    gap: 1.5rem;
+    padding: 0 10px;
+  }
+
+  .couple-names h2 {
+    font-size: 1.5rem;
+  }
+
+  .couple-names .parent {
+    font-size: 0.9rem;
+  }
+  .nama-endang-overlay {
+    top: 38%; /* sedikit turun di tablet */
+  }
+
+  .person-endang h2 {
+    font-size: 1.5rem;
+  }
+
+  .person-endang .parent {
+    font-size: 0.9rem;
+  }
+  rsvp {
+    padding: 15px 15px;
+    max-width: 90%;
+  }
+
+  .rsvp h2 {
+    font-size: 1.5rem;
+  }
+
+  .rsvp form {
+    max-width: 100%;
+    gap: 12px;
+  }
+
+  .rsvp input,
+  .rsvp select,
+  .rsvp button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .bismillah {
+    margin-top: 70px;
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    margin-bottom :80%;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .couple-names h2 {
+    margin-bottom: 10%; 
+    font-size: 1.4rem;
+  }
+
+  .couple-names .parent {
+    font-size: 0.85rem;
+  }
+  .nama-endang-overlay {
+    top: 30%; /* lebih turun di HP kecil */
+  }
+
+  .person-endang h2 {
+    font-size: 1.4rem;
+  }
+
+  .person-endang .parent {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+   .gift h1 {
+    font-size: 1.5rem;
+  }
+
+  .gift p {
+    font-size: 0.9rem;
+  }
+
+  }
+
+  .rekening {
+    font-size: 1rem;
+  }
+
+  #copyBtn {
+    font-size: 0.9rem;
+    padding: 9px 16px;
+  }
+  .rsvp {
+    padding: 25px 10px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .rsvp h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .rsvp form {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .rsvp input,
+  .rsvp select,
+  .rsvp button {
+    font-size: 0.9rem;
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .rsvp button {
+    font-size: 0.95rem;
+  }
+
+  #rsvpMessage {
+    font-size: 0.9rem;
+  }
+  #rsvpList {
+    max-width: 90%;
+  }
+  .rsvp-item {
+    font-size: 0.9rem;
+  }
+}
+
+//Responsive Event//
+@media (max-width: 768px) {
+  .event {
+    padding: 40px 15px;
+  }
+
+  .event h2 {
+    font-size: 1.7rem;
+  }
+
+  .event-card {
+    width: 90%;
+    max-width: 350px;
+    padding: 16px 14px;
+  }
+
+  .event-card i {
+    font-size: 1.6rem;
+  }
+
+  .event-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .event-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* === RESPONSIVE: HP (≤ 480px) === */
+@media (max-width: 480px) {
+  .event {
+    padding: 30px 10px;
+  }
+
+  .event h2 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+  }
+
+  .event-card {
+    width: 95%;
+    padding: 14px 12px;
+    max-width: 320px;
+    margin-bottom: 12px;
+  }
+
+  .event-card::before {
+    width: 40px;
+  }
+
+  .event-card i {
+    font-size: 1.4rem;
+  }
+
+  .event-card h3 {
+    font-size: 1rem;
+  }
+
+  .event-card p {
+    font-size: 0.8rem;
+  }
+}
+
+/* === RESPONSIVE: Extra Small (≤ 360px) === */
+@media (max-width: 360px) {
+  .event-card {
+    padding: 12px 10px;
+    max-width: 290px;
+  }
+
+  .event-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .event-card p {
+    font-size: 0.75rem;
+  }
+  rsvp h2 {
+    font-size: 1.2rem;
+  }
+
+  .rsvp input,
+  .rsvp select,
+  .rsvp button {
+    font-size: 0.85rem;
+    padding: 9px;
+  }
+}
