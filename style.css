@@ -22,6 +22,7 @@ body {
   position: relative;
   z-index: 0;
   overflow: visible;
+  transition: all .8s ease-in-out;
 }
 
 .section-cover img {
@@ -124,6 +125,7 @@ body {
   padding: 60px 20px;
   color: white;
   z-index: 10;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
 }
 
 .bismillah {
@@ -167,12 +169,13 @@ body {
   font-size: 0.95rem;
   font-style: italic;
   line-height: 1.5;
+  
 }
 
 /* === SAVE THE DATE DI DALAM FOTO === */
 .save-date-overlay {
   position: absolute;
-  bottom: -330px; /* ⬅️ Geser naik/turun posisi di dalam gambar */
+  bottom: -325px; /* ⬅️ Geser naik/turun posisi di dalam gambar */
   left: 50%; /* Tengah secara horizontal */
   transform: translateX(-50%);
   text-align: center;
@@ -550,12 +553,12 @@ body {
 
 @media (max-width: 480px) {
   .bismillah {
-    margin-top: 70px;
+    margin-top: 10px;
     font-size: 1.5rem;
   }
 
   .subtitle {
-    margin-bottom :80%;
+    margin-bottom :50%;
     font-size: 0.95rem;
     line-height: 1.4;
   }
@@ -579,6 +582,7 @@ body {
   .person-endang .parent {
     font-size: 0.95rem;
     line-height: 1.4;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
   }
    .gift h1 {
     font-size: 1.5rem;
@@ -635,7 +639,7 @@ body {
   .rsvp-item {
     font-size: 0.9rem;
   }
-}
+
 
 //Responsive Event//
 @media (max-width: 768px) {
